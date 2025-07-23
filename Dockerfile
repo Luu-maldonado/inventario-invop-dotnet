@@ -6,12 +6,12 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
 # Copia el archivo .csproj y restaura dependencias
-COPY ["Proyect_InvOperativa.csproj", "./"]
-RUN dotnet restore "Proyect_InvOperativa.csproj"
+COPY ["Proyect-InvOperativa.csproj", "./"]
+RUN dotnet restore "Proyect-InvOperativa.csproj"
 
 # Copia el resto del código y compila
 COPY . .
-RUN dotnet publish "Proyect_InvOperativa.csproj" -c Release -o /app/publish
+RUN dotnet publish "Proyect-InvOperativa.csproj" -c Release -o /app/publish
 
 # Runtime image
 FROM base AS final
