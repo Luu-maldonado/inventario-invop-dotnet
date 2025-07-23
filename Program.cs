@@ -121,7 +121,7 @@ app.Use(async (context, next) =>
 
 app.UseCors("AllowFrontend");
 
-//app.UseHttpsRedirection();
+app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
