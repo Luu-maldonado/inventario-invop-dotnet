@@ -62,7 +62,7 @@ builder.Services.AddScoped<DetalleOrdenCompraService>();
 builder.Services.AddScoped<ProveedorService>();
 builder.Services.AddScoped<ProveedorEstadoService>();
 builder.Services.AddScoped<DescuentoArticuloService>();
-builder.Services.AddHostedService<ControlStockPeriodoFijoService>();
+//builder.Services.AddHostedService<ControlStockPeriodoFijoService>();
 
 var apiBaseRoute = builder.Configuration.GetValue<string>("ApiBaseRoute");
 
@@ -121,7 +121,7 @@ app.Use(async (context, next) =>
 
 app.UseCors("AllowFrontend");
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
