@@ -42,7 +42,6 @@ packages/
 *~
 CodeCoverage/
 .vs/
-appsettings.json
 launchSettings.json
 Properties/
 
