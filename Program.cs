@@ -130,7 +130,7 @@ app.Use(async (context, next) =>
     Console.WriteLine("Origin: " + context.Request.Headers["Origin"]);
     await next.Invoke();
 });
-
+app.MapGet("/", () => "API funcionando correctamente");
 app.MapControllers();
 
 app.Run();
